@@ -13,6 +13,7 @@ const SearchResults = ({ data, searchText}) => {
     return <MovieCard movie={movie} key={i} id={id} />;
   });
 
+
   return (
     <div>
         <Hero text={searchText} data={data}/>
@@ -21,6 +22,9 @@ const SearchResults = ({ data, searchText}) => {
       </div>
     </div>
   );
+
+  
+
 };
 
 export default SearchResults;
