@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import SearchResults from './components/SearchResults';
+import Hero from './components/Hero';
 
 function App() {
 
@@ -26,7 +27,7 @@ function App() {
   return (
     <div >
       <Navbar searchText = {searchText} setSearchText = {setSearchText}/>
-      <SearchResults data = {searchData}/>
+      <SearchResults data = {searchData} searchText= {searchText}/>
     </div>
   );
 }

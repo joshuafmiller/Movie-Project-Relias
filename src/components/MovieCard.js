@@ -6,7 +6,7 @@ const MovieCard = ({ movie, id }) => {
   //figure out why cards are not centered in middle of screen properly
   return (
     <div
-      className="card m-1 p-0"
+      className="card m-1 p-0 shadow-lg"
       style={{ width: "14rem" }}
       type="button"
       data-bs-toggle="modal"
@@ -25,7 +25,6 @@ const MovieCard = ({ movie, id }) => {
       />
       <div className="card-body">
         <h5 className="card-title text-center">{movie.original_title}</h5>
-        {/* <a href="#" class="btn btn-primary">Movie Details</a> */}
         <MovieModal movie={movie} id={id} posterPath={posterPath} />
       </div>
     </div>
