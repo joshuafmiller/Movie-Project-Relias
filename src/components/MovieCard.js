@@ -1,12 +1,20 @@
-const MovieCard = ({ movie }) => {
+import MovieModal from "./MovieModal";
+
+const MovieCard = ({ movie, id }) => {
   const posterPath = `https://image.tmdb.org/t/p/original${movie.poster_path}`;
 
   //figure out why cards are not centered in middle of screen properly
   return (
-    <div className="card m-1 p-0" style={{ width: "14rem" }}>
+    <div
+      className="card m-1 p-0"
+      style={{ width: "14rem" }}
+      type="button"
+      data-bs-toggle="modal"
+      data-bs-target={"#" + id}
+    >
       <img
         src={posterPath}
-        className="card-img-top"
+        className="card-img-top "
         alt={movie.original_title}
         style={{ height: "321px" }}
         onError={(event) => {
@@ -18,6 +26,7 @@ const MovieCard = ({ movie }) => {
       <div className="card-body">
         <h5 className="card-title text-center">{movie.original_title}</h5>
         {/* <a href="#" class="btn btn-primary">Movie Details</a> */}
+        <MovieModal movie={movie} id={id} posterPath={posterPath} />
       </div>
     </div>
   );
