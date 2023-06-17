@@ -3,7 +3,6 @@ import MovieModal from "./MovieModal";
 const MovieCard = ({ movie, id }) => {
   const posterPath = `https://image.tmdb.org/t/p/original${movie.poster_path}`;
 
-  //figure out why cards are not centered in middle of screen properly
   return (
     
     <div

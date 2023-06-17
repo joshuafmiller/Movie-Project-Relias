@@ -1,4 +1,4 @@
-// go back and add buttons for other pages/links
+
 const Navbar = ({ searchText, setSearchText, setPageNumber }) => {
   const updateSearchText = (e) => {
     setSearchText(e.target.value);

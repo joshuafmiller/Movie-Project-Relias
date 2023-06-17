@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import SearchResults from './components/SearchResults';
-import Hero from './components/Hero';
 import PageBar from './components/PageBar';
 
 function App() {
@@ -19,10 +18,8 @@ function App() {
       fetch(`https://api.themoviedb.org/3/search/movie?api_key=865af2d7a2841663c7ddbf893658cbac&language=en-US&query=${searchText}&page=${pageNumber}&include_adult=false`)
       .then(response => response.json())
       .then(data => {
-        console.log(data)
         setSearchData(data.results)
         setSearchResults(data.total_results)
-        console.log(data.total_results)
       });
     };
   }, [searchText][pageNumber])

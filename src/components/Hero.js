@@ -18,7 +18,7 @@ const Hero = ({text, searchResults}) => {
         <h1 className="hero-text">Movie Browser</h1>
         <br></br>
         <br></br>
-        <h6>Please use the search bar in the top right to searh for a movie</h6>
+        <h6>Please use the search bar in the top right to search for a movie</h6>
         <h6>Click on a movie poster to see additional information</h6>
       </header>
         )
