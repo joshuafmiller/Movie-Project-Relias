@@ -1,13 +1,14 @@
+import SearchResults from "./SearchResults";
 
 
-const Hero = ({text, data}) => {
+const Hero = ({text, searchResults}) => {
     if(text){
     return(
         <header className="bg-dark text-white p-5 hero-container text-center">
         <h1 className="hero-text">Searching for: {text}</h1>
         <br></br>
         <br></br>
-        <h6>Results found: {data.length}</h6>
+        <h6>Results found: {searchResults}</h6>
       </header>  
     )
     }

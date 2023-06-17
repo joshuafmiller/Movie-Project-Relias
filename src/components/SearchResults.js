@@ -1,7 +1,7 @@
 import Hero from "./Hero";
 import MovieCard from "./MovieCard";
 
-const SearchResults = ({ data, searchText}) => {
+const SearchResults = ({ data, searchText, searchResults}) => {
   //looping through search result json and rendering card per iteration
   //movie argument in map method is the current movie data iteration
   //passing this into the movie prop to populate the MovieCard
@@ -13,17 +13,27 @@ const SearchResults = ({ data, searchText}) => {
     return <MovieCard movie={movie} key={i} id={id} />;
   });
 
-
+if(searchText){
   return (
     <div>
-        <Hero text={searchText} data={data}/>
+        <div>
+        <Hero text={searchText} data={data} searchResults={searchResults}/>
+        </div>
       <div className="container">
         <div className="row">{cardData}</div>
       </div>
     </div>
   );
-
-  
+}
+else{
+    return (
+        <div>
+            <div>
+            <Hero text={searchText} data={data} searchResults={searchResults}/>
+            </div>
+        </div>
+      );
+};
 
 };
 
