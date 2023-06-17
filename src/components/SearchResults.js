@@ -1,7 +1,8 @@
 import Hero from "./Hero";
 import MovieCard from "./MovieCard";
+import NoResults from "./NoResults";
 
-const SearchResults = ({ data, searchText, searchResults}) => {
+const SearchResults = ({ data, searchText, searchResults }) => {
   //looping through search result json and rendering card per iteration
   //movie argument in map method is the current movie data iteration
   //passing this into the movie prop to populate the MovieCard
@@ -13,28 +14,34 @@ const SearchResults = ({ data, searchText, searchResults}) => {
     return <MovieCard movie={movie} key={i} id={id} />;
   });
 
-if(searchText){
-  return (
-    <div>
-        <div>
-        <Hero text={searchText} data={data} searchResults={searchResults}/>
-        </div>
-      <div className="container">
-        <div className="row">{cardData}</div>
-      </div>
-    </div>
-  );
-}
-else{
+  if (searchText && searchResults > 0) {
     return (
+      <div>
         <div>
-            <div>
-            <Hero text={searchText} data={data} searchResults={searchResults}/>
-            </div>
+          <Hero text={searchText} data={data} searchResults={searchResults} />
         </div>
-      );
-};
-
+        <div className="container">
+          <div className="row">{cardData}</div>
+        </div>
+      </div>
+    );
+  }
+  if (searchText && searchResults == 0) {
+    return (
+      <div>
+        <Hero text={searchText} data={data} searchResults={searchResults} />
+        <NoResults />
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <div>
+          <Hero text={searchText} data={data} searchResults={searchResults} />
+        </div>
+      </div>
+    );
+  }
 };
 
 export default SearchResults;
