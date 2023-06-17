@@ -9,7 +9,7 @@ const Navbar = ({ searchText, setSearchText, setPageNumber }) => {
     <nav className="navbar bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand">Movie Browser</a>
-        <form className="d-flex" role="search" onSubmit={e => {e.preventDefault();}}>
+        <form className="d-flex " role="search" onSubmit={e => {e.preventDefault();}}>
           <input
             className="form-control me-2"
             type="search"

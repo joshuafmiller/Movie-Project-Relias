@@ -13,19 +13,19 @@ const PageBar = ({ setPageNumber, pageNumber, searchResults, searchText }) => {
   if (searchText && searchResults > 0) {
     return (
       <div>
-        <ul class="pagination justify-content-center">
-          <li class="page-item">
-            <button class="page-link" onClick={updatePageNumberDown}>
+        <ul className="pagination justify-content-center">
+          <li className="page-item">
+            <button className="page-link" onClick={updatePageNumberDown}>
               Previous
             </button>
           </li>
-          <li class="page-item">
-            <button class="page-link" onClick={updatePageNumberUp}>
+          <li className="page-item">
+            <button className="page-link" onClick={updatePageNumberUp}>
               Next
             </button>
           </li>
         </ul>
-        <p class="text-center">
+        <p className="text-center">
           Page: {pageNumber} of {totalPages}
         </p>
       </div>

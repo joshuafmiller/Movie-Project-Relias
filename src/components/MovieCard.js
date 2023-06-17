@@ -15,7 +15,7 @@ const MovieCard = ({ movie, id }) => {
     >
       <img
         src={posterPath}
-        className="card-img-top "
+        className="card-img-top card-hover"
         alt={movie.original_title}
         style={{ height: "321px" }}
         onError={(event) => {
