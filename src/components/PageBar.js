@@ -31,15 +31,6 @@ const PageBar = ({ setPageNumber, pageNumber, searchResults, searchText }) => {
       </div>
     );
   }
-//   if (searchText && searchResults == 0) {
-//     return (
-//       <div>
-//         <h1 className="text-center">No Results Found</h1>
-//         <br></br>
-//         <h3 className="text-center">Please Search Again</h3>
-//       </div>
-//     );
-//   }
 };
 
 export default PageBar;
