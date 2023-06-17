@@ -21,7 +21,7 @@ const SearchResults = ({ data, searchText, searchResults }) => {
           <Hero text={searchText} data={data} searchResults={searchResults} />
         </div>
         <div className="container">
-          <div className="row">{cardData}</div>
+          <div className="row d-flex justify-content-center">{cardData}</div>
         </div>
       </div>
     );

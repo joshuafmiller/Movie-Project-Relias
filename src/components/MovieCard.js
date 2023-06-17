@@ -5,6 +5,7 @@ const MovieCard = ({ movie, id }) => {
 
   //figure out why cards are not centered in middle of screen properly
   return (
+    
     <div
       className="card m-1 p-0 shadow-lg"
       style={{ width: "14rem" }}
@@ -28,6 +29,7 @@ const MovieCard = ({ movie, id }) => {
         <MovieModal movie={movie} id={id} posterPath={posterPath} />
       </div>
     </div>
+
   );
 };
 
