@@ -1,5 +1,7 @@
 
+
 const Navbar = ({ searchText, setSearchText, setPageNumber }) => {
+
   const updateSearchText = (e) => {
     setSearchText(e.target.value);
     setPageNumber(1);
