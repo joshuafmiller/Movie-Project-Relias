@@ -1,13 +1,21 @@
 const PageBar = ({ setPageNumber, pageNumber, searchResults, searchText }) => {
+
+
   const totalPages = Math.ceil(searchResults / 20);
   const updatePageNumberUp = () => {
     if (pageNumber < totalPages) {
       setPageNumber(pageNumber + 1);
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+  
     }
   };
   const updatePageNumberDown = () => {
     if (pageNumber > 1) {
       setPageNumber(pageNumber - 1);
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+
     }
   };
   if (searchText && searchResults > 0) {
@@ -32,5 +40,7 @@ const PageBar = ({ setPageNumber, pageNumber, searchResults, searchText }) => {
     );
   }
 };
+
+
 
 export default PageBar;
