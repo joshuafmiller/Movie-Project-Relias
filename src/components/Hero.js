@@ -1,4 +1,4 @@
-import SearchResults from "./SearchResults";
+
 
 
 const Hero = ({text, searchResults}) => {
