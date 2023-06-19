@@ -5,16 +5,14 @@ const PageBar = ({ setPageNumber, pageNumber, searchResults, searchText }) => {
   const updatePageNumberUp = () => {
     if (pageNumber < totalPages) {
       setPageNumber(pageNumber + 1);
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
+      window.scrollTo({top: 0});
   
     }
   };
   const updatePageNumberDown = () => {
     if (pageNumber > 1) {
       setPageNumber(pageNumber - 1);
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
+      window.scrollTo({top: 0});
 
     }
   };
