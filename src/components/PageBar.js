@@ -15,6 +15,7 @@ const PageBar = ({ setPageNumber, pageNumber, searchResults, searchText }) => {
       setPageNumber(pageNumber - 1);
       window.scrollTo({ top: 0 });
     }
+    //display page buttons and total number of pages if search results are present and more than 1 page
   };
   if (searchText && searchResults > 0 && totalPages > 1) {
     return (
@@ -37,7 +38,7 @@ const PageBar = ({ setPageNumber, pageNumber, searchResults, searchText }) => {
       </div>
     );
   }
-  //if only 1 page, do not display page buttons
+  //if only 1 page, do not display page buttons but display total pages
   if (searchText && searchResults > 0 && totalPages == 1) {
     return (
       <p className="text-center">

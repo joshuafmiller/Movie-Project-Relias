@@ -22,6 +22,7 @@ function App() {
           setSearchResults(data.total_results);
         })
         .catch((error) => {
+          //TODO: do real error handling
           console.log(error);
         });
     }

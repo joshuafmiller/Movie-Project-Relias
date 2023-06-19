@@ -12,7 +12,7 @@ const Navbar = ({setSearchText, setPageNumber,  }) => {
   //debounced used to delay updating searchText state so API call is not made every key change.  this allows an api call to be made after typing stops
   const debouncedResults = useMemo(() => {
     return debounce(updateSearchText, 200);
-  }, []);
+  }, [updateSearchText]);
 
   
   return (

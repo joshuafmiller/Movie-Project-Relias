@@ -1,18 +1,19 @@
 import Hero from "./Hero";
 import MovieCard from "./MovieCard";
 import NoResults from "./NoResults";
+import { useMemo } from "react";
 
 const SearchResults = ({ data, searchText, searchResults }) => {
-  //id variable is used to create a unique ID to make the modal work - requires characters not numbers(even if numbers are s string, it does not work) (target ID in the modal HTML)
-  let id = "a";
 
   //looping through search result json and rendering card per iteration
   //movie argument in map method is the current movie data iteration
   //passing this into the movie prop to populate the MovieCard
-  const cardData = data.map((movie, i) => {
-    id = id + "a";
+  //pulling ID to pass into the MovieCard to create a unique ID for the HTML for the modals to work
+  const cardData = useMemo(() => {return data.map((movie, i) => {
+    const id = movie.id;
     return <MovieCard movie={movie} key={i} id={id} />;
   });
+}, [data]);
 
   //this will display only if results from the search are present below hero
   //search results and cards populate
