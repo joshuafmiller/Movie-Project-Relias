@@ -4,13 +4,12 @@ const MovieModal = ({ movie, id, posterPath }) => {
       className="modal fade"
       id={id}
       tabIndex="-1"
-      aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
-            <h1 className="modal-title fs-5" id="exampleModalLabel">
+            <h1 className="modal-title fs-5">
               {movie.original_title}
             </h1>
 
