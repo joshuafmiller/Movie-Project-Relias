@@ -22,9 +22,7 @@ const SearchResults = ({ data, searchText, searchResults }) => {
   if (searchText && searchResults > 0) {
     return (
       <div>
-        <div>
-          <Hero text={searchText} data={data} searchResults={searchResults} />
-        </div>
+        <Hero text={searchText} data={data} searchResults={searchResults} />
         <div className="container">
           <div className="row d-flex justify-content-center">{cardData}</div>
         </div>
@@ -44,11 +42,9 @@ const SearchResults = ({ data, searchText, searchResults }) => {
   //default hero is shown and nothing else
   } else {
     return (
-      <div>
         <div>
           <Hero  />
-        </div>
-      </div>
+        </div> 
     );
   }
 };
