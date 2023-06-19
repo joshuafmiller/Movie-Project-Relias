@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Movie-Project-Relias/static/css/main.7a496452.css",
-    "main.js": "/Movie-Project-Relias/static/js/main.d7b46a48.js",
+    "main.js": "/Movie-Project-Relias/static/js/main.d67f06e1.js",
     "static/js/787.8361cc62.chunk.js": "/Movie-Project-Relias/static/js/787.8361cc62.chunk.js",
     "index.html": "/Movie-Project-Relias/index.html",
     "main.7a496452.css.map": "/Movie-Project-Relias/static/css/main.7a496452.css.map",
-    "main.d7b46a48.js.map": "/Movie-Project-Relias/static/js/main.d7b46a48.js.map",
+    "main.d67f06e1.js.map": "/Movie-Project-Relias/static/js/main.d67f06e1.js.map",
     "787.8361cc62.chunk.js.map": "/Movie-Project-Relias/static/js/787.8361cc62.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7a496452.css",
-    "static/js/main.d7b46a48.js"
+    "static/js/main.d67f06e1.js"
   ]
 }
