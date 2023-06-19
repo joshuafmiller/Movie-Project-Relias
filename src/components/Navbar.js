@@ -2,6 +2,8 @@
 
 const Navbar = ({ searchText, setSearchText, setPageNumber, pageNumber }) => {
 
+//updating state for search text and page number
+//page number is always set back to 1 so if user is on another page, a new search will result back on page 1 results
   const updateSearchText = (e) => {
     setSearchText(e.target.value);
     if (pageNumber != 1){

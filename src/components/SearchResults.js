@@ -5,7 +5,7 @@ import NoResults from "./NoResults";
 const SearchResults = ({ data, searchText, searchResults }) => {
 
 
-  //id variable is used to create a unique ID to make the modal work - requires characters not numbers (target ID in the modal HTML)
+  //id variable is used to create a unique ID to make the modal work - requires characters not numbers(even if numbers are s string, it does not work) (target ID in the modal HTML)
   let id = "a";
 
   //looping through search result json and rendering card per iteration
@@ -17,7 +17,8 @@ const SearchResults = ({ data, searchText, searchResults }) => {
   });
 
 
-
+//this will display only if results from the search are present below hero
+//search results and cards populate
   if (searchText && searchResults > 0) {
     return (
       <div>
@@ -30,6 +31,8 @@ const SearchResults = ({ data, searchText, searchResults }) => {
       </div>
     );
   }
+  //this will display if no results are found
+  //no results message displayed below hero
   if (searchText && searchResults == 0) {
     return (
       <div>
@@ -37,6 +40,8 @@ const SearchResults = ({ data, searchText, searchResults }) => {
         <NoResults />
       </div>
     );
+  //this displays by default or on form clear/no text
+  //default hero is shown and nothing else
   } else {
     return (
       <div>
