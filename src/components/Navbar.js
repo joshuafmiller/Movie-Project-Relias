@@ -1,16 +1,20 @@
 import debounce from "lodash.debounce";
-import { useCallback } from "react";
+import { useMemo } from "react";
 
-const Navbar = ({ searchText, setSearchText, setPageNumber, pageNumber }) => {
+const Navbar = ({setSearchText, setPageNumber,  }) => {
   //updating state for search text and page number
   //page number is always set back to 1 so if user is on another page, a new search will result back on page 1 results
   const updateSearchText = (e) => {
     setSearchText(e.target.value);
-    if (pageNumber != 1) {
-      setPageNumber(1);
-    }
+     setPageNumber(1);
   };
 
+  //debounced used to delay updating searchText state so API call is not made every key change.  this allows an api call to be made after typing stops
+  const debouncedResults = useMemo(() => {
+    return debounce(updateSearchText, 200);
+  }, []);
+
+  
   return (
     <nav className="navbar bg-body-tertiary">
       <div className="container-fluid">
@@ -24,11 +28,10 @@ const Navbar = ({ searchText, setSearchText, setPageNumber, pageNumber }) => {
         >
           <input
             className="form-control me-2"
-            type="search"
+            type="text"
             placeholder="Search for a movie"
             aria-label="Search"
-            value={searchText}
-            onChange={updateSearchText}
+            onChange={debouncedResults}
           />
         </form>
       </div>

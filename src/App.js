@@ -30,10 +30,8 @@ function App() {
   return (
     <div>
       <Navbar
-        searchText={searchText}
         setSearchText={setSearchText}
         setPageNumber={setPageNumber}
-        pageNumber={pageNumber}
       />
       <SearchResults
         data={searchData}
