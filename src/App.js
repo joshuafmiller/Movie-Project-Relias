@@ -13,18 +13,17 @@ function App() {
 
   useEffect(() => {
     if (searchText) {
-      
-        fetch(
-          `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${searchText}&page=${pageNumber}&include_adult=false`
-        )
-          .then((response) => response.json())
-          .then((data) => {
-            setSearchData(data.results);
-            setSearchResults(data.total_results);
-          })
-          .catch(error =>{
-            console.log(error);
-          })
+      fetch(
+        `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${searchText}&page=${pageNumber}&include_adult=false`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          setSearchData(data.results);
+          setSearchResults(data.total_results);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }
   }, [searchText, pageNumber]);
 

@@ -3,8 +3,6 @@ import MovieCard from "./MovieCard";
 import NoResults from "./NoResults";
 
 const SearchResults = ({ data, searchText, searchResults }) => {
-
-
   //id variable is used to create a unique ID to make the modal work - requires characters not numbers(even if numbers are s string, it does not work) (target ID in the modal HTML)
   let id = "a";
 
@@ -16,9 +14,8 @@ const SearchResults = ({ data, searchText, searchResults }) => {
     return <MovieCard movie={movie} key={i} id={id} />;
   });
 
-
-//this will display only if results from the search are present below hero
-//search results and cards populate
+  //this will display only if results from the search are present below hero
+  //search results and cards populate
   if (searchText && searchResults > 0) {
     return (
       <div>
@@ -38,13 +35,13 @@ const SearchResults = ({ data, searchText, searchResults }) => {
         <NoResults />
       </div>
     );
-  //this displays by default or on form clear/no text
-  //default hero is shown and nothing else
+    //this displays by default or on form clear/no text
+    //default hero is shown and nothing else
   } else {
     return (
-        <div>
-          <Hero  />
-        </div> 
+      <div>
+        <Hero />
+      </div>
     );
   }
 };

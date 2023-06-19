@@ -4,7 +4,6 @@ const MovieCard = ({ movie, id }) => {
   const posterPath = `https://image.tmdb.org/t/p/original${movie.poster_path}`;
 
   return (
-    
     <div
       className="card m-1 p-0 shadow-lg"
       style={{ width: "14rem" }}
@@ -28,7 +27,6 @@ const MovieCard = ({ movie, id }) => {
         <MovieModal movie={movie} id={id} posterPath={posterPath} />
       </div>
     </div>
-
   );
 };
 
