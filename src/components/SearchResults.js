@@ -41,7 +41,7 @@ const SearchResults = ({ data, searchText, searchResults }) => {
     return (
       <div>
         <div>
-          <Hero text={searchText} data={data} searchResults={searchResults} />
+          <Hero  />
         </div>
       </div>
     );

@@ -1,6 +1,7 @@
 
 
 const MovieModal = ({movie, id, posterPath}) => {
+  
 
     return(
 <div className="modal fade" id={id} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -25,7 +26,7 @@ const MovieModal = ({movie, id, posterPath}) => {
       </div>
       
       <div>
-        <p className="text-center">Release Date: {movie.release_date}</p>
+        <p className="text-center">Release Date: {new Date(movie.release_date).toDateString().substring(4,15)}</p>
       </div>
     </div>
   </div>

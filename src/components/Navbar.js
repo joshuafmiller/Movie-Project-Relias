@@ -1,10 +1,12 @@
 
 
-const Navbar = ({ searchText, setSearchText, setPageNumber }) => {
+const Navbar = ({ searchText, setSearchText, setPageNumber, pageNumber }) => {
 
   const updateSearchText = (e) => {
     setSearchText(e.target.value);
+    if (pageNumber != 1){
     setPageNumber(1);
+    };
   };
 
   return (

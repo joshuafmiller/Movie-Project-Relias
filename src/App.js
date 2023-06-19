@@ -22,11 +22,11 @@ function App() {
         setSearchResults(data.total_results)
       });
     };
-  }, [searchText][pageNumber])
+  }, [searchText, pageNumber])
 
   return (
     <div >
-      <Navbar searchText = {searchText} setSearchText = {setSearchText} setPageNumber={setPageNumber}/>
+      <Navbar searchText = {searchText} setSearchText = {setSearchText} setPageNumber={setPageNumber} pageNumber= {pageNumber}/>
       <SearchResults data = {searchData} searchText= {searchText} searchResults = {searchResults}/>
       <PageBar setPageNumber = {setPageNumber} pageNumber= {pageNumber} searchResults = {searchResults} searchText = {searchText}/>
     </div>
