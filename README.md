@@ -13,6 +13,24 @@ This project was deployed using GitHub Pages.
 - [React](https://react.dev/)
 - [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 
+## How to Run Locally
+
+Run the following command in your CLI
+
+git clone https://github.com/joshuafmiller/Movie-Project-Relias.git
+
+cd into the folder with this command:
+
+cd .\Movie-Project-Relias\
+
+Install dependencies by running:
+
+npm install
+
+Start the application by running the following command:
+
+npm start
+
 ## How To Use
 When the user arrives to the page, instructions are provided to direct the user to the top right of the screen.
 
@@ -25,6 +43,7 @@ If there are more than 20 results, Previous and Next buttons are displayed.  The
 If no results are found, the user will give given a no results found message.
 
 The user can clear search results by removing the current search text.
+
 
 ## Next Steps
 
