@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Movie Browser
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About the Project
 
-## Available Scripts
+This project allows users to search through a movie database and display results including the movie title, poster, description, and release date.  The results are displayed on indiviual cards including a pop-out modal with addtional information.
 
-In the project directory, you can run:
+### Deployed Link
+This project was deployed using GitHub Pages.
+- [Deployed Site](https://joshuafmiller.github.io/Movie-Project-Relias/)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Built With
+- [React](https://react.dev/)
+- [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How To Use
+When the user arrives to the page, instructions are provided to direct the user to the top right of the screen.
 
-### `npm test`
+The search bar can be used to search through the movie database.  As text is entered or changed, search results will be displayed on the page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The user can click on the cards displayed to display the pop-out modal which provides additonal movie information.
 
-### `npm run build`
+If there are more than 20 results, Previous and Next buttons are displayed.  The user can navigate between results pages by clicking the Previous or Next buttons.  A change to the search text will always bring the user back to Page 1.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If no results are found, the user will give given a no results found message.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The user can clear search results by removing the current search text.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Next Steps
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Create a backend so the user can save favorties or recent searches
+- Add error handling if there is a failed API request.  Currently there is a catch on error to just console log the error which prevents crashing but does not do anything else.
