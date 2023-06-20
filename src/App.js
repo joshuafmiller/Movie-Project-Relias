@@ -5,7 +5,7 @@ import SearchResults from "./components/SearchResults";
 import PageBar from "./components/PageBar";
 
 function App() {
-  const apiKey = "865af2d7a2841663c7ddbf893658cbac";
+  const apiKey = "7eabe1f7ec403601dd3d824d503ad6f3";
   const [searchData, setSearchData] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [searchResults, setSearchResults] = useState([]);
