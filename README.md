@@ -15,21 +15,24 @@ This project was deployed using GitHub Pages.
 
 ## How to Run Locally
 
-Run the following command in your CLI
+Run the following command in your CLI:
 
-git clone https://github.com/joshuafmiller/Movie-Project-Relias.git
+`git clone https://github.com/joshuafmiller/Movie-Project-Relias.git`
 
-cd into the folder with this command:
+Change directory into the folder with this command:
 
-cd .\Movie-Project-Relias\
+`cd .\Movie-Project-Relias\`
 
 Install dependencies by running:
 
-npm install
+`npm install`
 
 Start the application by running the following command:
 
-npm start
+`npm start`
+
+You can now access the site by navigating to this address in the browser:
+`http://localhost:3000/Movie-Project-Relias`
 
 ## How To Use
 When the user arrives to the page, instructions are provided to direct the user to the top right of the screen.
