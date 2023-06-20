@@ -32,6 +32,7 @@ Start the application by running the following command:
 `npm start`
 
 You can now access the site by navigating to this address in the browser:
+
 `http://localhost:3000/Movie-Project-Relias`
 
 ## How To Use
