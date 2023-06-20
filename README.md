@@ -28,5 +28,5 @@ The user can clear search results by removing the current search text.
 
 ## Next Steps
 
-- Create a backend so the user can save favorties or recent searches
+- Create a backend so the user can save favorties or recent searches.
 - Add error handling if there is a failed API request.  Currently there is a catch on error to just console log the error which prevents crashing but does not do anything else.
